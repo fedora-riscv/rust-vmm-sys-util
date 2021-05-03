@@ -1,0 +1,22 @@
+diff --git a/src/linux/ioctl.rs b/src/linux/ioctl.rs
+index c50e01e..07e2b6c 100644
+--- a/src/linux/ioctl.rs
++++ b/src/linux/ioctl.rs
+@@ -221,7 +221,7 @@ type IoctlRequest = c_ulong;
+ ///
+ /// # Examples
+ ///
+-/// ```
++/// ```ignore
+ /// # extern crate libc;
+ /// #[macro_use] extern crate vmm_sys_util;
+ /// #
+@@ -263,7 +263,7 @@ pub unsafe fn ioctl<F: AsRawFd>(fd: &F, req: c_ulong) -> c_int {
+ ///
+ /// # Examples
+ ///
+-/// ```
++/// ```ignore
+ /// # extern crate libc;
+ /// #[macro_use] extern crate vmm_sys_util;
+ /// # use libc::{open, O_CLOEXEC, O_RDWR};
