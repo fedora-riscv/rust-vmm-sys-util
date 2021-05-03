@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        0.8.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Helpers and utilities used by multiple rust-vmm components and VMMs 
 
 # Upstream license specification: Apache-2.0 AND BSD-3-Clause
@@ -19,7 +19,7 @@ Patch0:         vmm-sys-util-fix-metadata.diff
 # Omit tests that require access to "/dev/kvm"
 Patch1:         vmm-sys-util-omit-ioctl-tests.diff
 
-ExclusiveArch:  %{rust_arches}
+ExclusiveArch:  x86_64 aarch64 ppc64le
 %if %{__cargo_skip_build}
 BuildArch:      noarch
 %endif
@@ -112,5 +112,8 @@ which use "with-serde" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Mon May 03 2021 Sergio Lopez <slp@redhat.com> - 0.8.0-2
+- Exclude unsupported arches
+
 * Tue Mar 23 2021 Sergio Lopez <slp@redhat.com> - 0.8.0-1
 - Initial package
