@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        0.8.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Helpers and utilities used by multiple rust-vmm components and VMMs 
 
 # Upstream license specification: Apache-2.0 AND BSD-3-Clause
@@ -112,6 +112,9 @@ which use "with-serde" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.8.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Mon May 03 2021 Sergio Lopez <slp@redhat.com> - 0.8.0-2
 - Exclude unsupported arches
 
