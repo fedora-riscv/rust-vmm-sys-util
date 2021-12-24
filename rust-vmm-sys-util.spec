@@ -5,8 +5,8 @@
 %global crate vmm-sys-util
 
 Name:           rust-%{crate}
-Version:        0.8.0
-Release:        3%{?dist}
+Version:        0.9.0
+Release:        1%{?dist}
 Summary:        Helpers and utilities used by multiple rust-vmm components and VMMs 
 
 # Upstream license specification: Apache-2.0 AND BSD-3-Clause
@@ -112,6 +112,9 @@ which use "with-serde" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Fri Dec 24 2021 Sergio Lopez <slp@redhat.com> - 0.9.0-1
+- Update to 0.9.0
+
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.8.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
