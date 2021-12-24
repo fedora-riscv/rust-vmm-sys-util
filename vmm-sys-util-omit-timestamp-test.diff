@@ -1,0 +1,12 @@
+diff --git a/src/rand.rs b/src/rand.rs
+index 6b759ff..3c33ad3 100644
+--- a/src/rand.rs
++++ b/src/rand.rs
+@@ -91,6 +91,7 @@ mod tests {
+     use super::*;
+ 
+     #[test]
++    #[cfg(not(target_arch = "aarch64"))]
+     fn test_timestamp_cycles() {
+         for _ in 0..1000 {
+             assert!(timestamp_cycles() < timestamp_cycles());

@@ -18,6 +18,8 @@ Source:         %{crates_source}
 Patch0:         vmm-sys-util-fix-metadata.diff
 # Omit tests that require access to "/dev/kvm"
 Patch1:         vmm-sys-util-omit-ioctl-tests.diff
+# Omit unsupported timestamp test on aarch64
+Patch2:         vmm-sys-util-omit-timestamp-test.diff
 
 ExclusiveArch:  x86_64 aarch64 ppc64le
 %if %{__cargo_skip_build}
@@ -112,6 +114,9 @@ which use "with-serde" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Fri Dec 24 2021 Sergio Lopez <slp@redhat.com> - 0.9.0-2
+- Omit unsupported timestamp test on aarch64
+
 * Fri Dec 24 2021 Sergio Lopez <slp@redhat.com> - 0.9.0-1
 - Update to 0.9.0
 
