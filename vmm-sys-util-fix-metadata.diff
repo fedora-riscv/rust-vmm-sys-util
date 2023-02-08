@@ -1,12 +1,12 @@
 diff --git a/Cargo.toml b/Cargo.toml
-index 4254378..737b9e0 100644
+index f1da15c..2d04831 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -20,6 +20,7 @@ readme = "README.md"
- keywords = ["utils"]
- license = "Apache-2.0 AND BSD-3-Clause"
+@@ -20,6 +20,7 @@ keywords = ["utils"]
+ license = "BSD-3-Clause"
  repository = "https://github.com/rust-vmm/vmm-sys-util"
+ resolver = "2"
 +exclude = ["rust-vmm-ci/*", "/coverage_config_*"]
  [dependencies.libc]
- version = ">=0.2.39"
+ version = "0.2.39"
  
