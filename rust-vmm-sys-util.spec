@@ -20,6 +20,8 @@ Patch0:         vmm-sys-util-fix-metadata.diff
 Patch1:         vmm-sys-util-omit-ioctl-tests.diff
 # Omit unsupported timestamp test on aarch64
 Patch2:         vmm-sys-util-omit-timestamp-test.diff
+# Omit unsupported pseudo_rng test on aarch64
+Patch3:         vmm-sys-util-omit-pseudo_rng-test.diff
 
 ExclusiveArch:  x86_64 aarch64 ppc64le
 %if %{__cargo_skip_build}
@@ -117,6 +119,7 @@ use the "with-serde" feature of the "%{crate}" crate.
 %changelog
 * Wed Feb 08 2023 Sergio Lopez <slp@redhat.com> - 0.11.1-1
 - Update to version 0.11.1
+- Omit unsupported pseudo_rng test on aarch64
 
 * Sat Jan 21 2023 Fedora Release Engineering <releng@fedoraproject.org> - 0.10.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_38_Mass_Rebuild
