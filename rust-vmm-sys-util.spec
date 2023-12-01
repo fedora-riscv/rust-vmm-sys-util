@@ -6,7 +6,7 @@
 
 Name:           rust-vmm-sys-util
 Version:        0.11.2
-Release:        %autorelease
+Release:        %autorelease -e rv64
 Summary:        System utility set
 
 License:        BSD-3-Clause
@@ -21,7 +21,7 @@ Patch:          vmm-sys-util-omit-timestamp-test.diff
 # Omit unsupported pseudo_rng test on aarch64
 Patch:          vmm-sys-util-omit-pseudo_rng-test.diff
 
-ExclusiveArch:  x86_64 aarch64 ppc64le
+ExclusiveArch:  x86_64 aarch64 ppc64le riscv64
 BuildRequires:  rust-packaging >= 21
 
 %global _description %{expand:
